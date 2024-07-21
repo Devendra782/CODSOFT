@@ -21,29 +21,28 @@ public class student_grade_calculator {
         System.out.print("Enter marks of Hindi : ");
         int Hindi = sc.nextInt() ;
 
-        int sum = Mathematics + Physics + Chemistry + English + Hindi ;
-        double Avg_Percentage = sum/5 ;
+        double sum = Mathematics + Physics + Chemistry + English + Hindi ;
+        double averagePercentage = sum/5 ;
 
-        System.out.println("Total Marks : " + sum);
-        System.out.println("Average Percentage : " + Avg_Percentage);
+        char grade ;
 
-        if(Avg_Percentage>=90) {
-            System.out.println("Grade : A+");
-        }else if(Avg_Percentage>=80) {
-            System.out.println("Grade : A");
-        }else if(Avg_Percentage>=70) {
-            System.out.println("Grade : B+");
-        }else if(Avg_Percentage>=60) {
-            System.out.println("Grade : B");
-        }else if(Avg_Percentage>=50) {
-            System.out.println("Grade : C+");
-        }else if(Avg_Percentage>=40) {
-            System.out.println("Grade : C");
-        }else if(Avg_Percentage>=33) {
-            System.out.println("Grade : D+");
-        }else if(Avg_Percentage>=0) {
-            System.out.println("Grade : D");
+        if (averagePercentage >= 90) {
+            grade = 'A';
+        } else if (averagePercentage >= 80) {
+            grade = 'B';
+        } else if (averagePercentage >= 70) {
+            grade = 'C';
+        } else if (averagePercentage >= 60) {
+            grade = 'D';
+        } else {
+            grade = 'F';
         }
+
+        
+        System.out.println("Total Marks : " + sum);
+        System.out.println("Average Percentage : " + averagePercentage);
+        System.out.println("Grade : " + grade);
+
 
     }
     
